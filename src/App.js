@@ -79,9 +79,7 @@ function Board({ xIsNext, squares, onPlay, color, tie }) {
       return;
     }
     const nextSquares = squares.slice();
-    {
-      xIsNext ? (nextSquares[i] = "X") : (nextSquares[i] = "O");
-    }
+    nextSquares[i] = xIsNext ? "X" : "O";
     onPlay(nextSquares);
   }
 
